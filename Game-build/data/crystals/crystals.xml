@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE MyGL_XML_Data>
+
+<crystals>
+
+  <crystal_blue>
+    <texture name = "crystal_blue.diff"
+             file = "./data/crystals/blue/par.png" />
+
+    <particle_txt name = "crystal_blue"
+                  file = "./data/crystals/blue/particle.m" />
+
+    <texture name = "crystal_blue.base.diff"
+             file = "./data/crystals/blue/diff.png" />
+    <texture name = "crystal_blue.base.glow"
+             file = "./data/crystals/blue/diff.png" />
+    <model name = "crystal_blue.base"
+           file = "./data/crystals/blue/model.mb" />
+  </crystal_blue>
+
+  <crystal_green>
+    <texture name = "crystal_green.diff"
+             file = "./data/crystals/green/par.png" />
+
+    <particle_txt name = "crystal_green"
+                  file = "./data/crystals/green/particle.m" />
+
+    <texture name = "crystal_green.base.diff"
+             file = "./data/crystals/green/diff.png" />
+    <texture name = "crystal_green.base.glow"
+             file = "./data/crystals/green/diff.png" />
+    <model name = "crystal_green.base"
+           file = "./data/crystals/green/model.mb" />
+  </crystal_green>
+
+  <crystal_red>
+    <texture name = "crystal_red.diff"
+             file = "./data/crystals/red/par.png" />
+
+    <particle_txt name = "crystal_red"
+                  file = "./data/crystals/red/particle.m"
+                  size = "1" />
+
+    <texture name = "crystal_red.base.diff"
+             file = "./data/crystals/red/diff.png" />
+    <texture name = "crystal_red.base.glow"
+             file = "./data/crystals/red/diff.png" />
+    <model name = "crystal_red.base"
+           file = "./data/crystals/red/model.mb" />
+  </crystal_red>
+
+</crystals>

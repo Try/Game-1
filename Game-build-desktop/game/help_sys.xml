@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Game_XML_Data>
+
+<help>
+
+  <class name    = "no_minerals" >
+    <group name  = "help_sys" />
+    <hint text   = "Не хватает золота!" />
+    <icon file   = "./pixmaps/messages/gold.png" />
+  </class>
+
+  <class name    = "no_pilons" >
+    <group name  = "help_sys" />
+    <hint text   = "Нужно построить больше домов." />
+    <icon file   = "./pixmaps/messages/house.png" />
+  </class>
+
+  <class name    = "no_conditions" >
+    <group name  = "help_sys" />
+    <hint text   = "Не выполнены условия для сторительства!" />
+    <icon file   = "./pixmaps/messages/no_conditions.png" />
+  </class>
+
+  <class name    = "no_place" >
+    <group name  = "help_sys" />
+    <hint text   = "Невозможно разместить строение." />
+    <icon file   = "./pixmaps/messages/no_place.png" />
+  </class>
+
+  <class name    = "atackEvent" >
+    <group name  = "help_sys" />
+    <hint text   = "Наши войска атакованы." />
+    <icon file   = "./pixmaps/messages/atack.png" />
+  </class>
+
+</help>

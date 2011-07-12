@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Game_XML_Data>
+
+<atacks>
+
+
+<atack  emitter  = "pike"
+        receiver = "lightweight"
+        dim      = "2.0" />
+
+<atack  emitter  = "pike"
+        receiver = "panzer"
+        dim      = "0.5" />
+
+<atack  emitter  = "pike"
+        receiver = "magic"
+        dim      = "1.0" />
+
+
+
+<atack  emitter  = "hummer"
+        receiver = "lightweight"
+        dim      = "1.0" />
+
+<atack  emitter  = "hummer"
+        receiver = "panzer"
+        dim      = "1.0" />
+
+<atack  emitter  = "hummer"
+        receiver = "magic"
+        dim      = "1.0" />
+
+
+
+<atack  emitter  = "magic"
+        receiver = "lightweight"
+        dim      = "1.0" />
+
+<atack  emitter  = "magic"
+        receiver = "panzer"
+        dim      = "0.75" />
+
+<atack  emitter  = "magic"
+        receiver = "magic"
+        dim      = "0.45" />
+
+</atacks>

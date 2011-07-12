@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Game_XML_Data>
+
+<!-- Деревья -->
+<tree>
+
+  <class name = "plant">
+    <view  cull  = "false" atest_shadow = "true"/>
+    <group name  = "environ" />
+
+    <moveLock size = "2"/>
+    <input selectable = "false" />
+
+    <rand_size_min xyz = "0.5" />
+    <rand_size_max xyz = "1.0" />
+  </class>
+
+
+  <class name = "tree0" extends = "plant">
+    <view  data  = "tree0"
+           cull  = "true" />
+    <group name  = "tree" />
+    <size xy = "0.2"
+          z  = "0.35"/>
+
+    <rand_size_min xyz = "0.8" />
+    <rand_size_max xyz = "1.2" />
+  </class>
+
+  <class name = "tree1" extends = "plant">
+    <view  data  = "tree1" />
+    <view1 data  = "tree1.base" />
+
+    <group name  = "tree" />
+    <size xyz = "0.15"/>
+
+    <moveLock size = "3"/>
+
+    <rand_size_min xyz = "0.8" />
+    <rand_size_max xyz = "1.2" />
+  </class>
+
+  <class name = "tree2" extends = "plant">
+    <view  data  = "tree2" />
+    <view1 data  = "tree1.base" />
+
+    <group name  = "tree" />
+    <size xyz = "0.15"/>
+
+    <moveLock size = "3"/>
+
+    <rand_size_min xyz = "0.8" />
+    <rand_size_max xyz = "1.2" />
+  </class>
+
+  <class name = "tree5" extends = "plant">
+    <view  data  = "tree5"
+           cull  = "true" />
+    <group name  = "tree" />
+    <size xyz = "0.2"/>
+
+    <rand_size_min xyz = "0.85" />
+    <rand_size_max xyz = "1.15" />
+  </class>
+
+
+  <class name = "bush0" extends = "plant">
+    <view  data  = "bush" />
+    <view1 data  = "bush.base" />
+
+    <group name  = "tree" />
+    <size xyz = "0.1"/>
+
+    <rand_size_min xyz = "0.85" />
+    <rand_size_max xyz = "1.15" />
+  </class>
+
+  <class name = "bush1" extends = "plant">
+    <view  data  = "bush" />
+    <view1 data  = "bush.base" />
+    <moveLock size = "3"/>
+
+    <group name  = "tree" />
+    <size xyz = "0.2"/>
+
+    <rand_size_min xyz = "0.85" />
+    <rand_size_max xyz = "1.15" />
+  </class>
+
+  <class name = "beam" extends = "plant">
+    <view  data  = "beam" />
+    <moveLock size = "3"/>
+
+    <group name  = "tree" />
+    <size xyz = "0.2"/>
+
+    <rand_size_min xyz = "0.85" />
+    <rand_size_max xyz = "1.15" />
+  </class>
+
+  <class name = "pentium" extends = "plant">
+    <view  data  = "pentium" />
+    <moveLock size = "2"/>
+
+    <group name  = "tree" />
+    <size xyz = "0.2"/>
+
+    <rand_size_min xyz = "0.85" />
+    <rand_size_max xyz = "1.15" />
+  </class>
+
+</tree>

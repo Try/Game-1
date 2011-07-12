@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Game_XML_Data>
+
+<grades>
+
+  <class name    = "abstract_upgrade">
+    <group name  = "grades"/>
+
+    <build time = "800"/>
+    <cost  gold = "150" />
+    <hp max = "-1"/>
+
+    <view  data  = "parallax_test"/>
+    <icon file = "./pixmaps/base.jpg"/>
+    <atack_mode isGrade = "true"/>
+  </class>
+
+
+  <class name    = "pike_upgrade1" extends = "abstract_upgrade" >
+    <build time = "800"/>
+    <cost  gold = "150" />
+
+    <icon file = "./pixmaps/units/pike.png"/>
+
+    <atack_ll damage = "2" time = "0" />
+    <battle atack = "pike" />
+
+    <hint text = "Улучшить копья.[p] Стоимость: 150 золотых.
+                  Время постройки: 800."/>
+  </class>
+
+
+  <class name    = "hummer_upgrade1" extends = "abstract_upgrade" >
+    <build time = "800"/>
+    <cost gold = "150" />
+
+    <icon file = "./pixmaps/units/hammer.png"/>
+
+    <atack_ll damage = "2" time = "0" />
+    <battle atack = "hummer" />
+
+    <hint text = "Улучшить молоты.[h] Стоимость: 150 золотых.
+                  Время постройки: 800."/>
+  </class>
+
+
+  <class name    = "axe_upgrade1" extends = "abstract_upgrade" >
+    <build time = "800"/>
+    <cost gold = "150" />
+
+    <icon file = "./pixmaps/units/axe.png"/>
+
+    <hint text = "Улучшить топоры.[a] Стоимость: 150 золотых.
+                  Время постройки: 800."/>
+  </class>
+
+
+  <class name    = "magic_upgrade1" extends = "abstract_upgrade" >
+    <build time = "800"/>
+    <cost gold = "150" />
+
+    <icon file = "./pixmaps/units/magic.png"/>
+
+    <atack_ll damage = "2" time = "1" />
+    <battle atack = "magic" />
+
+    <hint text = "Улучшить магические посохи.[m] Стоимость: 150 золотых.
+                  Время постройки: 800."/>
+  </class>
+
+</grades>

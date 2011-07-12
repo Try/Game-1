@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Game_XML_Data>
+<units>
+  <module file = "./pixmaps/pixmaps.xml"/>
+  <module file = "./game/upgrades.xml"/>
+
+  <module file = "./game/units.xml"/>
+  <module file = "./game/buildings.xml"/>
+  <module file = "./game/hud.xml"/>
+  <module file = "./game/help_sys.xml"/>
+
+  <module file = "./game/trees.xml"/>
+  <module file = "./game/crystals.xml"/>
+
+  <!-- Коментарий -->
+  <class name = "parallax_test" >
+    <view  data  = "parallax_test"
+           cull  = "false"
+           blend = "alpha" />
+    <group name  = "tests" />
+    <init rand_rotate = "false"/>
+    <size xyz = "1"/>
+  </class>
+
+  <class name = "scerting_test" >
+    <view  data  = "scerting_test"
+           cull  = "false"
+           scerting = "true" />
+    <group name  = "tests" />
+    <init rand_rotate = "false"/>
+    <size xyz = "0.5"/>
+  </class>
+
+  <class name    = "crystal">
+    <view  data  = "crystal"
+           cull  = "false"
+           blend = "add"   />
+    <group name  = "environ" />
+    <size xyz = "0.5"/>
+
+    <icon file = "./data/crystal/icon.png"/>
+    <moveLock size = "0"/>
+    <behavior name = "resource"/>
+  </class>
+
+  <class name    = "gold">
+    <view  data  = "gold"
+           cull  = "false"
+           blend = "add"
+           scerting = "true"    />
+    <group name  = "environ" />
+    <size xyz = "0.55"/>
+
+    <moveLock size = "0"/>
+    <behavior name = "resource"/>
+
+    <rand_size_min xyz = "0.8" />
+    <rand_size_max xyz = "1.3" />
+  </class>
+
+  <class name = "addGold" >
+    <group name  = "utils" />
+    <icon file   = "./pixmaps/messages/gold.png" />
+
+    <view  data  = "parallax_test"/>
+    <hp max = "-1"/>
+    <cost gold = "-1000"/>
+  </class>
+
+  <class name = "cheatObject" >
+    <view  data  = "scerting_test"
+           cull  = "true" />
+    <size xyz = "0.15"/>
+    <moveLock size = "0"/>
+
+    <behavior name = "building"/>
+    <group name  = "utils" />
+
+    <recrut name = "addGold"
+            shortcut = "g"/>
+  </class>
+
+  <!-- Растения -->
+
+  <class name    = "grass" extends = "plant">
+    <view  data  = "grass"
+           cull  = "false" />
+    <group name  = "environ" />
+    <size xy = "0.15" z = "0.1"/>
+
+    <moveLock size = "0"/>
+  </class>
+
+  <class name = "farn1" extends = "plant">
+    <view  data  = "farn1"
+           cull  = "true" />
+    <size xyz = "0.15"/>
+    <moveLock size = "0"/>
+
+    <rand_size_min xy = "0.5" />
+    <rand_size_max xy = "2.0" />
+    <rand_size proportional = "true"/>
+  </class>
+
+  <class name = "altar" extends = "plant">
+    <view  data  = "altar"
+           cull  = "true" />
+    <size xy = "0.1" z = "0.15"/>
+    <moveLock size = "1"/>
+
+    <rand_size_min xy = "0.9" />
+    <rand_size_max xy = "1.1" />
+    <rand_size proportional = "true"/>
+  </class>
+
+  <class name = "farn2" extends = "plant">
+    <view  data  = "farn2"
+           cull  = "true" />
+    <size xyz = "0.15"/>
+    <moveLock size = "0"/>
+
+    <rand_size_min xy = "0.5" />
+    <rand_size_max xy = "2.0" />
+    <rand_size proportional = "true"/>
+  </class>
+
+  <class name = "blush0" extends = "plant">
+    <view  data  = "blush0"  />
+    <size xyz = "0.5"/>
+  </class>
+
+  <class name = "blush1" extends = "plant">
+    <view  data  = "blush2"  />
+    <size xyz = "0.15"/>
+
+    <rand_size_min xyz = "0.75" />
+    <rand_size_max xyz = "2.0" />
+    <rand_size proportional = "true"/>
+  </class>
+
+  <class name = "blush2" extends = "plant">
+    <view  data  = "blush2"/>
+    <size xyz = "0.15"/>
+    <moveLock size = "0"/>
+
+    <rand_size_min xyz = "0.75" />
+    <rand_size_max xyz = "2.0" />
+    <rand_size proportional = "true"/>
+  </class>
+
+  <class name = "blush3" extends = "plant">
+    <view  data  = "blush3"/>
+    <size xyz = "0.15"/>
+    <moveLock size = "0"/>
+
+    <rand_size_min xyz = "0.75" />
+    <rand_size_max xyz = "2.0" />
+    <rand_size proportional = "true"/>
+  </class>
+
+  <class name = "blush4" extends = "plant">
+    <view  data  = "blush4" />
+    <size xyz = "0.15"/>
+    <moveLock size = "0"/>
+
+    <rand_size_min xyz = "0.75" />
+    <rand_size_max xyz = "2.0" />
+    <rand_size proportional = "true"/>
+  </class>
+
+
+  <!-- Камни -->
+
+  <class name = "abstract_rock" >
+    <view  data  = "rock00"  />
+    <size  xyz   = "0.1"     />
+    <group name  = "environ" />
+    <moveLock size = "1"/>
+
+    <rand_size_min xyz = "0.5" />
+    <rand_size_max xyz = "3.0" />
+  </class>
+
+  <class name = "rock00" extends = "abstract_rock" >
+    <view  data  = "rock00"  />
+  </class>
+
+  <class name = "rock01" extends = "abstract_rock" >
+    <view  data  = "rock01"  />
+  </class>
+
+  <class name = "rock02" extends = "abstract_rock" >
+    <view  data  = "rock02"  />
+  </class>
+
+  <class name = "rock03" extends = "abstract_rock" >
+    <view  data  = "rock03"  />
+  </class>
+
+  <class name = "rock04" extends = "abstract_rock" >
+    <view  data  = "rock04"  />
+  </class>
+
+  <class name = "rock05" extends = "abstract_rock" >
+    <view  data  = "rock05"  />
+    <rand_size proportional = "true"/>
+  </class>
+
+  <class name = "rock06" extends = "abstract_rock" >
+    <view  data  = "rock06"  />
+    <moveLock size = "0"/>
+  </class>
+
+  <class name = "rock07" extends = "abstract_rock" >
+    <view  data  = "rock04"  />
+
+    <rand_size proportional = "true"/>
+    <size  xy   = "0.3" z ="0.5"    />
+    <moveLock size = "3"/>
+
+    <rand_size_min xyz = "0.75" />
+    <rand_size_max xyz = "1.0" />
+  </class>
+
+</units>
+
+<!--Ниже только жопа-->

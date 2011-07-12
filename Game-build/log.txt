@@ -1,0 +1,5 @@
+file "./pixmaps/base.jpg" noit found
+image './data/background/altar/_color.jpg' not loaded
+image './data/background/altar/normal.jpg' not loaded
+image './data/buildings/camp/diff.jpg' not loaded
+image './data/bullets/ballista.jpg' not loaded

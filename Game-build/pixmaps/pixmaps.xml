@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE MyGL_XML_Data>
+<pixmaps>
+
+<pixmap file = "./pixmaps/run.png"     key = "run"/>
+<pixmap file = "./pixmaps/pause.png"   key = "pause"/>
+
+<pixmap file = "./pixmaps/build.png" key = "build"/>
+<pixmap file = "./pixmaps/actions/cansel.png" key = "cansel"/>
+<pixmap file = "./pixmaps/cansel_build.png" key = "cansel_build"/>
+
+<pixmap file = "./pixmaps/units/axe.png"    key = "axe"/>
+<pixmap file = "./pixmaps/units/hammer.png" key = "hammer"/>
+<pixmap file = "./pixmaps/units/magic.png"  key = "magic"/>
+<pixmap file = "./pixmaps/units/pike.png"   key = "pike"/>
+
+<pixmap file = "./pixmaps/infoPanel.png"    key = "infoPanel"/>
+
+<pixmap file = "./pixmaps/actions/move.png"    key = "move"/>
+<pixmap file = "./pixmaps/actions/sword.png"   key = "atack"/>
+
+<pixmap file = "./pixmaps/back.png"   key = "back"/>
+
+<pixmap key = "worker.diff"
+        file = "./data/units/worker/tex.png" />
+<pixmap key = "worker.mask"
+        file = "./data/units/worker/texture.png" />
+
+<pixmap key = "house.diff"
+        file = "./data/buildings/house/tex.png" />
+<pixmap key = "house.mask"
+        file = "./data/buildings/house/mask.png" />
+
+<pixmap key = "golem.glow"
+        file = "./data/units/golem/glow.png" />
+<pixmap key = "golem.mask"
+        file = "./data/units/golem/mask.png" />
+
+<pixmap key = "pikeman.diff"
+        file = "./data/units/pikeman/tex.png" />
+<pixmap key = "pikeman.mask"
+        file = "./data/units/pikeman/mask.png" />
+
+<pixmap key = "hummer.diff"
+        file = "./data/units/hummer/tex.png" />
+<pixmap key = "hummer.mask"
+        file = "./data/units/hummer/mask.png" />
+
+<pixmap key = "balista.diff"
+        file = "./data/units/balista/tex.png" />
+<pixmap key = "balista.mask"
+        file = "./data/units/balista/mask.png" />
+
+<pixmap key = "gelion.diff"
+        file = "./data/units/gelion/tex.png" />
+<pixmap key = "gelion.mask"
+        file = "./data/units/gelion/mask.png" />
+
+<pixmap key = "mage.diff"
+        file = "./data/units/mage/tex.png" />
+<pixmap key = "mage.mask"
+        file = "./data/units/mage/mask.png" />
+
+<pixmap key = "incvisitor.diff"
+        file = "./data/units/incvisitor/tex.png" />
+<pixmap key = "incvisitor.mask"
+        file = "./data/units/incvisitor/mask.png" />
+
+</pixmaps>

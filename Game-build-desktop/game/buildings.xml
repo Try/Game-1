@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Game_XML_Data>
+
+<units>
+
+  <!-- Здания -->
+  <class name    = "building">
+    <group name  = "building"/>
+    <size x = "1.0" y = "1.0" z = "1.0"/>
+    <init rand_rotate = "false"/>
+    <build time = "100"/>
+
+    <cost gold = "1" />
+    <atack_mode invulnerable = "false"/>
+    <atack_mode agressor = "false"/>
+
+    <hp max = "150"/>
+
+    <battle atack = "pike"
+            armo  = "panzer" />
+  </class>
+
+
+
+  <class name    = "barracks" extends = "building" >
+    <size xyz = "0.12" />
+    <view  data  = "barracks" />
+    <moveLock size = "4"/>
+    <icon file = "./data/buildings/barracks/icon.png"/>
+
+    <build time = "700"/>
+    <cost gold = "150" />
+    <hp max = "1500"/>
+
+    <behavior name = "building"/>
+
+    <recrut   name = "pikeman"
+              shortcut = "p"/>
+
+    <recrut   name = "hummer"
+              shortcut = "h"/>
+
+    <recrut   name = "balista"
+              shortcut = "b"  />
+
+    <recrut   name = "gelion"
+              shortcut = "g"  />
+
+    <priview file = "./helpSys/barracks.png" />
+    <hint text = "Казармы. [b] Стоимость: 150 золотых.
+                  Время постройки: 700.
+                  "/>
+  </class>
+
+
+  <class name    = "stone_cyrcle" extends = "building" >
+    <view  data  = "stone_cyrcle"    />
+    <group name  = "building" />
+    <size xyz = "0.1"/>
+    <moveLock size = "4"/>
+    <icon file = "./data/buildings/stone_cyrcle/icon.png" />
+
+    <build  time = "400"/>
+    <cost   gold = "250" />
+    <hp max = "1500"/>
+
+    <recrut name = "golem"
+            shortcut = "g"  />
+    <behavior name = "building"/>
+
+    <need object = "barracks"/>
+
+    <priview file = "./helpSys/stone_cyrcle.png" />
+    <hint text = "Круг камней.[s] Стоимость: 250 золотых.
+                  Время постройки: 400.
+
+                  Требуются: казармы.
+
+                  Служит для найма големов."/>
+  </class>
+
+  <class name    = "forge" extends = "building" >
+    <size xyz = "0.12" />
+    <view  data  = "forge" />
+    <moveLock size = "4"/>
+    <icon file = "./data/buildings/forge/icon.png"/>
+
+    <build time = "700"/>
+    <cost gold = "150" />
+    <hp max = "1500"/>
+
+    <behavior name = "building"/>
+
+    <recrut name = "pike_upgrade1"
+            shortcut = "p"  />
+    <recrut name = "hummer_upgrade1"
+            shortcut = "h"  />
+    <!--
+    <recrut name = "axe_upgrade1"
+            shortcut = "a"  />-->
+
+
+    <priview file = "./helpSys/forge.png" />
+    <hint text = "Оружейная. [f] Стоимость: 150 золотых.
+                  Время постройки: 700.
+
+                  Требуются: казармы.
+                  "/>
+  </class>
+
+  <class name    = "tower" extends = "building" >
+    <view  data  = "tower"/>
+    <moveLock size = "3"/>
+    <size xyz = "1.1"/>
+    <icon file = "./data/tower/icon.png"/>
+    <build time = "400"/>
+    <cost gold = "150" />
+
+    <atack_ll damage = "20" time = "15" atackRange = "6" bullet = "fireBall"/>
+    <behavior name = "warrior"/>
+    <atack_mode agressor = "true"/>
+
+    <hp max = "200"/>
+    <need object = "forge"/>
+
+    <priview file = "./helpSys/tower.png" />
+    <hint text = "Башня.[t] Стоимость: 150 золотых.
+                  Время постройки: 400.
+
+                  Требуется: оружейная.
+
+                  Служит для обороны базы."/>
+  </class>
+
+  <class name    = "house" extends = "building" >
+    <view  data  = "house"/>
+    <generate texture = "true"/>
+
+    <moveLock size = "3"/>
+    <size xyz = "1.2"/>
+    <icon file = "./data/buildings/house/icon.png"/>
+    <build time = "400"/>
+
+    <behavior name = "building"/>
+    <cost gold = "100"
+          lim  = "-8" />
+
+
+    <priview file = "./helpSys/house.png" />
+    <hint text = "Домик.[e] Стоимость: 100 золотых.
+                  Жилье: +8. Время постройки: 400."/>
+
+    <hp max = "200"/>
+  </class>
+
+  <class name    = "fire_cram" extends = "building" >
+    <size xyz = "0.15" />
+    <view  data  = "fire_cram" />
+    <moveLock size = "4"/>
+    <icon file = "./data/buildings/fire_cram/icon.png"/>
+
+    <behavior name = "building"/>
+
+    <recrut   name = "mage"
+              shortcut = "m"  />
+
+    <recrut   name = "incvisitor"
+              shortcut = "i"  />
+
+    <build time = "1200"/>
+    <cost gold = "150" />
+    <hp max = "5000"/>
+
+    <need object = "stone_cyrcle"/>
+
+    <priview file = "./helpSys/fire_cram.png" />
+    <hint text = "Храм огня.[m] Стоимость: 150 золотых.
+                  Время постройки: 1200.
+
+                  Требуется: круг камней.
+                  "/>
+  </class>
+
+  <class name    = "magic_tower" extends = "building" >
+    <size xy = "0.1" z="0.07" />
+    <view  data  = "magic_tower" />
+    <moveLock size = "2"/>
+    <icon file = "./data/buildings/magic_tower/icon.png"/>
+
+    <build time = "1000"/>
+    <cost gold  = "300" />
+    <hp max = "1500"/>
+
+    <behavior name = "building"/>
+
+    <need object = "fire_cram"/>
+
+    <recrut name = "magic_upgrade1"
+            shortcut = "m"  />
+
+    <priview file = "./helpSys/magic_tower.png" />
+    <hint text = "Башня магов. [a] Стоимость: 300 золотых.
+                  Время постройки: 1000.
+
+                  Требуется: храм огня.
+                  "/>
+  </class>
+
+  <class name    = "castle" extends = "building" >
+    <size xyz = "0.11" />
+    <view  data  = "castle"/>
+    <moveLock size = "5"/>
+    <icon file = "./data/buildings/castle/icon.png"/>
+
+    <build time = "1600"/>
+    <cost gold = "400"
+          lim  = "-10"  />
+    <hp max = "2000"/>
+
+    <priview file = "./helpSys/castle.png" />
+    <hint text = "Замок.[c] Стоимость: 400 золотых.
+                  Жилье: +10. Время постройки: 2000.
+
+                  Замок используется для хранения ресурсов и
+                  найма рабочих."/>
+
+    <behavior name = "central_building"/>
+
+    <recrut   name = "worker"
+              shortcut = "e"  />
+  </class>
+
+
+
+  <class name    = "camp" extends = "building" >
+    <view  data  = "camp"
+           cull  = "false" />
+
+    <moveLock size = "3"/>
+    <size xyz = "0.05"/>
+    <icon file = "./data/buildings/house/icon.png"/>
+    <build time = "400"/>
+
+    <behavior name = "building"/>
+    <cost gold = "100"
+          lim  = "-8" />
+
+
+    <priview file = "./helpSys/house.png" />
+    <hint text = "Домик.[e] Стоимость: 100 золотых.
+                  Жилье: +8. Время постройки: 400."/>
+
+    <hp max = "200"/>
+  </class>
+
+<units/>

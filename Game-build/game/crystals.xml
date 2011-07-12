@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Game_XML_Data>
+
+<!-- Кристаллы -->
+<crystal>
+
+  <class name = "crystal_blue" extends = "plant">
+    <view1  data  = "crystal_blue"
+            blend = "add"   />
+    <view data  = "crystal_blue.base"
+          blend = "add"   />
+    <moveLock size = "3"/>
+
+    <group name  = "crystals" />
+    <size xyz = "1.0"/>
+
+    <rand_size_min xyz = "0.85" />
+    <rand_size_max xyz = "1.15" />
+  </class>
+
+  <class name = "crystal_green" extends = "crystal_blue">
+    <view1  data  = "crystal_green"
+            blend = "add"   />
+    <view data  = "crystal_green.base"
+          blend = "add"   />
+  </class>
+
+  <class name = "crystal_red" extends = "crystal_blue">
+    <view1  data  = "crystal_red"
+            blend = "add"   />
+    <view data  = "crystal_red.base"
+          blend = "add"   />
+  </class>
+
+</crystal>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Game_XML_Data>
+
+<bullets>
+
+  <class name    = "abstract_bullet">
+    <group name  = "bullets"/>
+  </class>
+
+
+  <class name    = "fireBall" extends = "abstract_bullet">
+    <view  data  = "Bullet::sphere"
+           blend = "add" />
+    <size xyz = "0.1"/>
+  </class>
+
+  <class name    = "pike" extends = "abstract_bullet">
+    <view  data  = "Bullet::pike" />
+    <size xyz = "0.15"/>
+  </class>
+
+</bullets>

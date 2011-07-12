@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Game_XML_Data>
+
+<!-- Юниты -->
+
+<units>
+
+<class name    = "forge"/>
+
+<module file = "./game/atack_types.xml"/>
+<module file = "./game/bullets.xml"/>
+
+  <class name    = "abstract_unit">
+    <group name  = "unit"/>
+    <size x = "1.0" y = "1.0" z = "1.0"/>
+    <init rand_rotate = "false"/>
+    <build time = "200"/>
+    <speed moveSpeed = "0.16"/>
+
+    <cost gold = "1" />
+    <hint text = "это юнит"/>
+
+    <atack_mode invulnerable = "false"/>
+
+    <battle atack = "hummer"
+            armo  = "panzer" />
+  </class>
+
+  <class name    = "unit" extends = "abstract_unit" >
+    <behavior name = "unit"/>
+  </class>
+
+  <class name    = "worker" extends = "abstract_unit" >
+    <size xyz = "0.075" />
+    <view  data  = "worker" />
+    <icon file = "./data/units/worker/icon.png"/>
+
+    <generate texture = "true"/>
+    <atack_mode agressor = "false"/>
+
+    <hp max = "50"/>
+    <atack_ll damage = "5" time = "10" />
+
+    <behavior name = "worker"/>
+
+    <build time = "200"/>
+    <cost gold = "50"
+          lim  = "1" />
+
+    <priview file = "./helpSys/worker.png" />
+    <hint text = "Рабочий.[e]
+                  Стоимость: 50 золотых.
+                  Жилье: 1. Время постройки: 200.
+
+                  рабочии используются для
+                  сбора ресурсов и постройки зданий"/>
+
+    <recrut   name = "castle"
+              shortcut = "c"  />
+    <recrut   name = "house"
+              shortcut = "e"  />
+    <recrut   name = "barracks"
+              shortcut = "g"  />
+    <recrut   name = "forge"
+              shortcut = "f"  />
+    <recrut   name = "tower"
+              shortcut = "t"  />
+    <recrut   name = "stone_cyrcle"
+              shortcut = "s"  />
+    <recrut   name = "fire_cram"
+              shortcut = "m"  />
+    <recrut   name = "magic_tower"
+              shortcut = "a"  />
+<!--
+    <recrut   name = "magic_tower"
+              shortcut = "a"  />
+
+    <recrut   name = "magic_tower"
+              shortcut = "a"  />-->
+
+  </class>
+
+
+  <class name    = "golem" extends = "unit" >
+    <size xyz = "0.75" />
+    <view  data  = "golem" />
+    <icon file = "./data/units/golem/icon.png"/>
+    <build time = "500"/>
+    <generate glow = "true"/>
+
+    <hp max = "150"/>
+    <atack_ll damage = "30" time = "15" />
+
+    <cost gold = "150"
+          lim  = "2" />
+
+    <battle atack = "hummer"
+            armo  = "panzer" />
+
+    <priview file = "./helpSys/golem.png" />
+    <hint text = "Голем.[g] Стоимость: 150 золотых.
+                  Жилье: 2. Время постройки: 500."/>
+  </class>
+
+
+  <class name    = "pikeman" extends = "unit" >
+    <size xyz = "0.075" />
+    <view  data  = "pikeman" />
+    <icon file = "./data/units/pikeman/icon.png"/>
+    <build time = "225"/>
+    <generate texture = "true"/>
+
+    <hp max = "100"/>
+    <atack_ll damage = "23" time = "10" />
+
+    <cost gold = "100"
+          lim  = "1" />
+
+    <battle atack = "pike"
+            armo  = "lightweight" />
+
+    <priview file = "./helpSys/game.png" />
+    <hint text = "Копейщик.[p] Стоимость: 100 золотых.
+                  Жилье: 1. Время постройки: 225."/>
+  </class>
+
+
+  <class name    = "hummer" extends = "unit" >
+    <size xyz = "0.075" />
+    <view  data  = "hummer" />
+    <icon file = "./data/units/hummer/icon.png"/>
+    <build time = "225"/>
+    <generate texture = "true"/>
+
+    <hp max = "100"/>
+    <atack_ll damage = "23" time = "10"/>
+
+    <cost gold = "125"
+          lim  = "1" />
+
+    <battle atack = "hummer"
+            armo  = "lightweight" />
+
+    <priview file = "./helpSys/game.png" />
+    <hint text = "Молотоборец.[h] Стоимость: 125 золотых.
+                  Жилье: 1. Время постройки: 225."/>
+  </class>
+
+
+  <class name    = "balista" extends = "unit" >
+    <size xyz = "0.075" />
+    <view  data  = "balista" />
+    <icon file = "./data/units/balista/icon.png"/>
+    <build time = "300"/>
+    <speed moveSpeed = "0.15"/>
+    <generate texture = "true"/>
+
+    <hp max = "100"/>
+    <atack_ll damage = "20" time = "15" atackRange = "7" bullet = "pike"/>
+
+    <cost gold = "200"
+          lim  = "2" />
+
+    <battle atack = "hummer"
+            armo  = "panzer" />
+
+    <priview file = "./helpSys/game.png" />
+    <hint text = "Баллиста.[b] Стоимость: 200 золотых.
+                  Жилье: 2. Время постройки: 300."/>
+  </class>
+
+
+  <class name    = "gelion" extends = "unit" >
+    <size xyz = "0.075" />
+    <view  data  = "gelion" />
+    <icon file = "./data/units/gelion/icon.png"/>
+    <build time = "300"/>
+    <generate texture = "true"/>
+
+    <need object = "forge"/>
+
+    <hp max = "75"/>
+    <atack_ll damage = "5" time = "5" atackRange = "4" bullet = "fireBall"/>
+
+    <cost gold = "200"
+          lim  = "2" />
+
+    <speed moveSpeed = "0.3"/>
+
+    <battle atack = "hummer"
+            armo  = "panzer" />
+
+    <priview file = "./helpSys/game.png" />
+    <hint text = "Гелион.[g] Стоимость: 200 золотых.
+                  Теребуется: оружейная.
+                  Жилье: 2. Время постройки: 300."/>
+  </class>
+
+
+  <class name    = "mage" extends = "unit" >
+    <size xyz = "0.075" />
+    <view  data  = "mage" />
+    <icon file = "./data/units/mage/icon.png"/>
+    <build time = "250"/>
+    <generate texture = "true"/>
+
+    <hp max = "200"/>
+    <speed moveSpeed = "0.15"/>
+    <atack_ll damage = "19" time = "14" atackRange = "5" bullet = "fireBall"/>
+
+    <cost gold = "200"
+          lim  = "1" />
+
+    <priview file = "./helpSys/game.png" />
+    <battle atack = "magic"
+            armo  = "lightweight" />
+
+<!--
+    <behavior name = "worker"/>
+
+    <recrut   name = "worker"
+              shortcut = "e"/>
+
+    <recrut   name = "hummer"
+              shortcut = "h"/>-->
+
+    <hint text = "Маг.[m] Стоимость: 200 золотых.
+                  Жилье: 1. Время постройки: 250."/>
+  </class>
+
+
+  <class name    = "incvisitor" extends = "unit" >
+    <size xyz = "0.075" />
+    <view  data  = "incvisitor" />
+    <icon file = "./data/units/incvisitor/icon.png"/>
+    <build time = "225"/>
+    <generate texture = "true"/>
+
+    <hp max = "200"/>
+    <speed moveSpeed = "0.2"/>
+    <atack_ll damage = "21" time = "12"/>
+
+    <cost gold = "250"
+          lim  = "1" />
+
+    <battle atack = "pike"
+            armo  = "magic" />
+
+    <priview file = "./helpSys/game.png" />
+    <hint text = "Инквизитор.[i] Стоимость: 250 золотых.
+                  Жилье: 1. Время постройки: 225."/>
+  </class>
+
+<units/>

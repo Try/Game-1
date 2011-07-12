@@ -1,0 +1,502 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE MyGL_XML_Data>
+<materials>
+  <module name = "./data/crystals/crystals.xml">
+  <module name = "./data/trees/trees.xml">
+
+  <shaders>
+    <shader name     = "grass"
+            vertex   = "./shaders/model/grass.vert"
+            fragment = "./shaders/model/grass.frag" />
+
+    <shader name     = "depth"
+            vertex   = "./shaders/model/depth.vert"
+            fragment = "./shaders/model/depth.frag" />
+
+    <shader name     = "glow"
+            vertex   = "./shaders/model/glow.vert"
+            fragment = "./shaders/model/glow.frag" />
+
+    <shader name     = "selRect"
+            vertex   = "./shaders/postEfects/selRect.vert"
+            fragment = "./shaders/postEfects/selRect.frag" />
+
+    <shader name     = "null"
+            vertex   = "./shaders/model/null.vert"
+            fragment = "./shaders/model/null.frag" />
+
+    <shader name     = "virtualTexturing"
+            vertex   = "./shaders/model/ext/virtual.vert"
+            fragment = "./shaders/model/ext/virtual.frag" />
+
+
+    <shader name     = "MyGL::BloomDownSample"
+            vertex   = "./shaders/postEfects/bloomGrab.vert"
+            fragment = "./shaders/postEfects/bloomGrab.frag" />
+
+    <shader name     = "MyGL::GlowDownSample"
+            vertex   = "./shaders/postEfects/bloomGrab.vert"
+            fragment = "./shaders/postEfects/glowGrab.frag" />
+
+    <shader name     = "MyGL::GausVerticalShader"
+            vertex   = "./shaders/postEfects/gaus.vert"
+            fragment = "./shaders/postEfects/gausV.frag" />
+
+    <shader name     = "MyGL::HorizontalShader"
+            vertex   = "./shaders/postEfects/gaus.vert"
+            fragment = "./shaders/postEfects/gausH.frag" />
+
+    <shader name     = "MyGL::SSAOShader"
+            vertex   = "./shaders/postEfects/ssao.vert"
+            fragment = "./shaders/postEfects/ssao.frag" />
+
+    <shader name     = "MyGL::LincShader"
+            vertex   = "./shaders/postEfects/linc.vert"
+            fragment = "./shaders/postEfects/linc.frag" />
+
+    <shader name     = "MyGL::BlurShadowShader"
+            vertex   = "./shaders/postEfects/blur_shadow.vert"
+            fragment = "./shaders/postEfects/blur_shadow.frag" />
+
+    <shader name     = "MyGL::VolumetricLightScatteringShader"
+            vertex   = "./shaders/postEfects/volumetric_light_scattering.vert"
+            fragment = "./shaders/postEfects/volumetric_light_scattering.frag" />
+  </shaders>
+
+  <textures>
+    <texture name = "red"
+       file = "./data/red.png" />
+    <texture name = "blue"
+         file = "./data/blue.png" />
+
+    <texture name = "black"
+           file = "./data/black.png" />
+
+    <model name = "parallax_test"
+           file = "./data/cube.mb" />
+    <texture name = "parallax_test.diff"
+             file = "./data/test/texture.png" />
+    <texture name = "parallax_test.spec"
+             file = "./data/test/texture.png" />
+    <texture name = "parallax_test.parallax"
+             file = "./data/test/heightmap.png" />
+
+
+    <model name = "scerting_test"
+           file = "./data/cube.mb" />
+    <texture name = "scerting_test.diff"
+             file = "./data/test/color.png" />
+
+
+    <texture name = "blush0.diff"
+             file = "./blush/diffuse.png" />
+    <texture name = "blush0.spec"
+             file = "./blush/specular.png" />
+    <texture name = "blush0.norm"
+             file = "./blush/normals.png" />
+    <texture name = "blush0.glow"
+             file = "./blush/glow.png" />
+
+    <texture name = "crystal.diff"
+             file = "./data/crystal/diff.png" />
+    <texture name = "crystal.spec"
+             file = "./data/crystal/stex.png" />
+    <texture name = "crystal.glow"
+             file = "./data/crystal/diff.png" />
+    <texture name = "crystal.norm"
+             file = "./data/crystal/norm.png" />
+
+    <texture name = "gold.diff"
+             file = "./data/gold/diff.png" />
+    <texture name = "gold.spec"
+             file = "./data/crystal/stex.png" />
+    <texture name = "gold.glow"
+             file = "./data/gold/glow.png" />
+    <texture name = "gold.norm"
+             file = "./data/crystal/norm.png" />
+
+    <!-- Текстуры земли -->
+
+    <texture name = "rand32"
+             file = "./land/rand.png" />
+
+    <texture name = "land.mask"
+             file = "./land/mask.png" />
+
+    <texture name = "land.diff"
+             file = "./land/tex.png" />
+
+    <texture name = "MyGL::rand4x4"
+             file = "./data/rand4x4.png" />
+
+
+    <texture name = "sand.mask"
+             file = "./land/mask2.png" />
+    <texture name = "sand.diff"
+             file = "./land/sand.png" />
+
+    <!-- Текстуры земли. Хватит -->
+
+<!--
+    <texture name = "land.spec"
+             file = "./land/stex.png" />
+    <texture name = "land.glow"
+             file = "./land/glow.png" />
+    <texture name = "land.norm"
+             file = "./land/norm.png" />-->
+
+    <texture name = "stone_cyrcle.diff"
+             file = "./data/buildings/stone_cyrcle/tex.png" />
+    <texture name = "stone_cyrcle.spec"
+             file = "./data/buildings/stone_cyrcle/stex.png" />
+    <texture name = "stone_cyrcle.glow"
+             file = "./data/buildings/stone_cyrcle/glow.png" />
+    <texture name = "stone_cyrcle.norm"
+             file = "./data/buildings/stone_cyrcle/norm.png" />
+  </textures>
+
+  <models>
+    <model_txt name = "quad"
+               file = "./model/quad.m" />
+
+    <model name = "crystal"
+           file = "./data/crystal/crystals.mb" />
+    <model name = "gold"
+           file = "./data/crystal/crystals.mb" />
+    <model name = "stone_cyrcle"
+           file = "./data/buildings/stone_cyrcle/stone.mb" />
+    <model name = "blush0"
+           file = "./blush/blush.mb" />
+  </models>
+
+  <hud>
+    <model_txt name = "selection"
+               file = "./data/utils/quad.m" />
+    <texture name = "selection.diff"
+             file = "./data/utils/cride.png" />
+  </hud>
+
+  <hud>
+    <model_txt name = "landQuad"
+               file = "./data/utils/quad.m" />
+    <texture name = "landQuad.diff"
+             file = "./data/utils/quad.png" />
+  </hud>
+
+  <altar>
+    <texture name = "altar.diff"
+             file = "./data/background/altar/_color.jpg" />
+    <texture name = "altar.spec"
+             file = "./data/background/altar/tex.png" />
+    <texture name = "altar.norm"
+             file = "./data/background/altar/normal.jpg" />
+
+    <model name = "altar"
+           file = "./data/background/altar/model.mb" />
+
+  </altar>
+
+  <grass>
+    <texture name = "grass.diff"
+             file = "./data/grass/tex.png" />
+    <model_txt name = "grass"
+               file = "./data/grass/grass.m" />
+
+  </grass>
+
+  <house>
+    <texture name = "house.norm"
+             file = "./data/buildings/house/norm.png" />
+
+    <model name = "house"
+           file = "./data/buildings/house/house.mb" />
+  </house>
+
+  <tower>
+    <texture name = "tower.diff"
+             file = "./data/tower/tex.png" />
+    <texture name = "tower.norm"
+             file = "./data/tower/norm.png" />
+
+    <model name = "tower"
+           file = "./data/tower/tower.mb" />
+
+  </tower>
+
+  <rock>
+    <texture name = "rock00.diff"
+             file = "./data/rocks/rocks00/tex.png" />
+    <texture name = "rock00.spec"
+             file = "./data/rocks/stex.png" />
+
+    <model name = "rock00"
+           file = "./data/rocks/rocks00/rocks.obj.mb" />
+  </rock>
+
+  <rock>
+    <texture name = "rock01.diff"
+             file = "./data/rocks/rocks01/tex.png" />
+    <texture name = "rock01.spec"
+             file = "./data/rocks/stex.png" />
+    <texture name = "rock01.norm"
+             file = "./data/rocks/norm.png" />
+
+    <model name = "rock01"
+           file = "./data/rocks/rocks01/rock.mb" />
+  </rock>
+
+  <rock>
+    <texture name = "rock02.diff"
+             file = "./data/rocks/rocks02/tex.png" />
+    <texture name = "rock02.spec"
+             file = "./data/rocks/stex.png" />
+    <texture name = "rock02.norm"
+             file = "./data/rocks/norm.png" />
+
+    <model name = "rock02"
+           file = "./data/rocks/rocks02/rock.mb" />
+  </rock>
+
+  <rock>
+    <texture name = "rock03.diff"
+             file = "./data/rocks/rocks03/tex.png" />
+    <texture name = "rock03.spec"
+             file = "./data/rocks/stex.png" />
+    <texture name = "rock03.norm"
+             file = "./data/rocks/norm.png" />
+
+    <model name = "rock03"
+           file = "./data/rocks/rocks03/rock.mb" />
+  </rock>
+
+  <rock>
+    <texture name = "rock04.diff"
+             file = "./data/rocks/rocks04/tex.png" />
+    <texture name = "rock04.spec"
+             file = "./data/rocks/stex.png" />
+    <texture name = "rock04.norm"
+             file = "./data/rocks/norm.png" />
+
+    <model name = "rock04"
+           file = "./data/rocks/rocks04/rock.mb" />
+  </rock>
+
+  <rock>
+    <texture name = "rock05.diff"
+             file = "./data/rocks/rocks05/tex.png" />
+    <texture name = "rock05.spec"
+             file = "./data/rocks/stex.png" />
+    <texture name = "rock05.norm"
+             file = "./data/rocks/norm.png" />
+
+    <model name = "rock05"
+           file = "./data/rocks/rocks05/rock.mb" />
+  </rock>
+
+  <rock>
+    <texture name = "rock06.diff"
+             file = "./data/rocks/rocks06/tex.png" />
+    <texture name = "rock06.spec"
+             file = "./data/rocks/stex.png" />
+    <texture name = "rock06.norm"
+             file = "./data/rocks/norm.png" />
+
+    <model name = "rock06"
+           file = "./data/rocks/rocks06/rock.mb" />
+  </rock>
+
+  <plant>
+    <texture name = "farn1.diff"
+             file = "./data/plants/farn1/tex.png" />
+
+    <model name = "farn1"
+           file = "./data/plants/farn1/farn.mb" />
+  </plant>
+
+  <plant>
+    <texture name = "farn2.diff"
+             file = "./data/plants/farn2/tex.png" />
+
+    <model name = "farn2"
+           file = "./data/plants/farn2/farn.mb" />
+  </plant>
+
+  <plant>
+    <texture name = "blush2.diff"
+             file = "./data/plants/blush/blush2/tex.png" />
+
+    <model name = "blush2"
+           file = "./data/plants/blush/blush2/blush.mb" />
+  </plant>
+
+  <plant>
+    <texture name = "blush3.diff"
+             file = "./data/plants/blush/blush3/tex.png" />
+    <model name = "blush3"
+           file = "./data/plants/blush/blush3/blush.mb" />
+  </plant>
+
+  <plant>
+    <texture name = "blush4.diff"
+             file = "./data/plants/blush/blush4/tex.png" />
+
+    <model name = "blush4"
+           file = "./data/plants/blush/blush4/blush.mb" />
+  </plant>
+
+  <unit>
+    <texture name = "worker.spec"
+             file = "./data/units/worker/stex.png" />
+
+    <model name = "worker"
+           file = "./data/units/worker/model.mb" />
+  </unit>
+
+  <unit>
+    <texture name = "fire_cram.diff"
+             file = "./data/buildings/fire_cram/tex.png" />
+    <texture name = "fire_cram.spec"
+             file = "./data/units/worker/stex.png" />
+    <texture name = "fire_cram.norm"
+             file = "./data/buildings/fire_cram/norm.png" />
+
+    <model name = "fire_cram"
+           file = "./data/buildings/fire_cram/model.mb" />
+  </unit>
+
+  <unit>
+    <texture name = "magic_tower.diff"
+             file = "./data/buildings/magic_tower/tex.png" />
+    <texture name = "magic_tower.spec"
+             file = "./data/units/worker/stex.png" />
+
+    <model name = "magic_tower"
+           file = "./data/buildings/magic_tower/model.mb" />
+  </unit>
+
+  <unit>
+    <texture name = "barracks.diff"
+             file = "./data/buildings/barracks/tex.png" />
+
+    <texture name = "barracks.spec"
+             file = "./data/buildings/barracks/stex.png" />
+    <texture name = "barracks.norm"
+             file = "./data/buildings/barracks/norm.png" />
+
+    <model name = "barracks"
+           file = "./data/buildings/barracks/model.mb" />
+  </unit>
+
+  <unit>
+    <texture name = "castle.diff"
+             file = "./data/buildings/castle/tex.png" />
+
+    <model name = "castle"
+           file = "./data/buildings/castle/model.mb" />
+  </unit>
+
+  <unit>
+    <texture name = "forge.diff"
+             file = "./data/buildings/forge/tex.png" />
+
+    <model name = "forge"
+           file = "./data/buildings/forge/model.mb" />
+  </unit>
+
+  <unit>
+    <texture name = "golem.diff"
+             file = "./data/units/golem/tex.png" />
+
+    <texture name = "golem.spec"
+             file = "./data/units/golem/tex.png" />
+
+    <texture name = "golem.glow"
+             file = "./data/units/golem/glow.png" />
+
+    <model name = "golem"
+           file = "./data/units/golem/model.mb" />
+  </unit>
+
+  <unit>
+    <texture name = "pikeman.spec"
+             file = "./data/units/pikeman/stex.png" />
+
+    <model name = "pikeman"
+           file = "./data/units/pikeman/model.mb" />
+  </unit>
+
+  <unit>
+    <texture name = "hummer.spec"
+             file = "./data/units/hummer/stex.png" />
+
+    <model name = "hummer"
+           file = "./data/units/hummer/model.mb" />
+  </unit>
+
+  <unit>
+    <texture name = "balista.spec"
+             file = "./data/units/balista/stex.png" />
+
+    <model name = "balista"
+           file = "./data/units/balista/model.mb" />
+  </unit>
+
+  <unit>
+    <texture name = "gelion.spec"
+             file = "./data/units/gelion/stex.png" />
+
+    <model name = "gelion"
+           file = "./data/units/gelion/model.mb" />
+  </unit>
+
+  <unit>
+    <texture name = "mage.spec"
+             file = "./data/units/mage/stex.png" />
+
+    <model name = "mage"
+           file = "./data/units/mage/model.mb" />
+  </unit>
+
+  <unit>
+    <texture name = "incvisitor.spec"
+             file = "./data/units/incvisitor/stex.png" />
+
+    <model name = "incvisitor"
+           file = "./data/units/incvisitor/model.mb" />
+  </unit>
+
+  <unit>
+    <texture name = "point_flag.diff"
+             file = "./data/point_flag/tex.png" />
+
+    <model name = "point_flag"
+           file = "./data/point_flag/model.mb" />
+  </unit>
+
+  <unit>
+    <texture name = "camp.diff"
+             file = "./data/buildings/camp/diff.jpg" />
+
+    <model name = "camp"
+           file = "./data/buildings/camp/model.mb" />
+  </unit>
+
+  <bullet>
+    <texture name = "Bullet::sphere.diff"
+             file = "./data/bullets/fireBall.png" />
+    <texture name = "Bullet::sphere.glow"
+             file = "./data/bullets/fireBall.png" />
+
+    <model name = "Bullet::sphere"
+           file = "./data/bullets/sphere.mb" />
+  </bullet>
+
+  <bullet>
+    <texture name = "Bullet::pike.diff"
+             file = "./data/bullets/ballista.jpg" />
+
+    <model name = "Bullet::pike"
+           file = "./data/bullets/ballista.mb" />
+  </bullet>
+
+</materials>

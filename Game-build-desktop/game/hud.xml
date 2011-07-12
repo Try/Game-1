@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Game_XML_Data>
+
+<!-- Худ -->
+<units>
+
+  <class name    = "selection">
+    <view  data  = "selection"
+           cull  = "false"
+           blend = "add"   />
+    <group name  = "HUD" />
+    <size xyz = "0.1"/>
+  </class>
+
+  <class name    = "landQuad">
+    <view  data  = "landQuad"
+           cull  = "false"
+           blend = "add"   />
+    <group name  = "HUD" />
+    <size xyz = "0.125"/>
+    <init rand_rotate = "false"/>
+
+  </class>
+
+  <class name    = "pointFlag">
+    <view  data  = "point_flag"
+           cull  = "false" />
+    <group name  = "HUD" />
+    <size xyz = "0.16"/>
+    <init rand_rotate = "false"/>
+    <input selectable = "false" />
+
+  </class>
+
+</units>

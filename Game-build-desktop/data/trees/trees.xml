@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE MyGL_XML_Data>
+
+<trees>
+  <tree0>
+    <texture name = "tree0.diff"
+             file = "./data/trees/tree0/tex.png" />
+
+    <model_txt name = "tree0"
+               file = "./data/trees/tree0/tree.m" />
+
+  </tree0>
+
+  <tree1>
+    <texture name = "tree1.diff"
+             file = "./data/trees/tree1/par.png" />
+
+    <particle_txt name = "tree1"
+                  file = "./data/trees/tree1/particle.m"
+                  size = "3" />
+
+    <texture name = "tree1.base.diff"
+             file = "./data/trees/tree1/diff.png" />
+    <model name = "tree1.base"
+           file = "./data/trees/tree1/model.mb" />
+  </tree1>
+
+  <tree2>
+    <texture name = "tree2.diff"
+             file = "./data/trees/tree2/par.png" />
+
+    <particle_txt name = "tree2"
+                  file = "./data/trees/tree2/particle.m"
+                  size = "3" />
+
+    <texture name = "tree2.base.diff"
+             file = "./data/trees/tree2/diff.png" />
+    <model name = "tree2.base"
+           file = "./data/trees/tree2/model.mb" />
+  </tree2>
+
+  <tree5>
+    <texture name = "tree5.diff"
+             file = "./data/trees/tree5/tex.png" />
+
+    <model name = "tree5"
+           file = "./data/trees/tree5/elka.mb" />
+  </tree5>
+
+  <beam>
+    <texture name = "beam.diff"
+             file = "./data/trees/beam/diff.png" />
+    <texture name = "beam.spec"
+             file = "./data/trees/beam/diff.png" />
+
+    <model name = "beam"
+           file = "./data/trees/beam/model.mb" />
+  </beam>
+
+  <pentium>
+    <texture name = "pentium.diff"
+             file = "./data/trees/pentium/diff.png" />
+    <texture name = "pentium.spec"
+             file = "./data/trees/pentium/diff.png" />
+
+    <model name = "pentium"
+           file = "./data/trees/pentium/model.mb" />
+  </pentium>
+
+  <bush>
+    <texture name = "bush.diff"
+             file = "./data/trees/bush/par.png" />
+
+    <particle_txt name = "bush"
+                  file = "./data/trees/bush/particle.m"
+                  size = "3" />
+
+    <texture name = "bush.base.diff"
+             file = "./data/trees/bush/diff.png" />
+    <model name = "bush.base"
+           file = "./data/trees/bush/model.mb" />
+  </bush>
+
+</trees>

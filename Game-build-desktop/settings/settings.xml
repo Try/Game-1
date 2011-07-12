@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE GameSettings>
+
+<settings>
+  <graphics
+    virtualTexture = "1"
+    bloom          = "1"
+    fog            = "0"
+    shadows        = "1"
+    shadowQuality  = "2"
+    windowMode     = "1"
+    grass  = "0"
+    ssao   = "0"
+    />
+
+  <game
+    cameraSpeed     = "0.9"
+    messageShowTime = "40"
+    />
+
+</settings>
