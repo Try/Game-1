@@ -109,18 +109,20 @@ bool UnitBehavior::canMove(float x, float y){
     }
 
 bool UnitBehavior::calcNextPos(float &x, float &y, float l){
-    float qspeed = moveVec[0]*moveVec[0]+moveVec[1]*moveVec[1];
-    if( sqrDistanceToTaget() <= l*qspeed ){
-      x = taget.pos[0];
-      y = taget.pos[1];
+    if( !wasMoveDisplace ){
+      float qspeed = moveVec[0]*moveVec[0]+moveVec[1]*moveVec[1];
+      if( sqrDistanceToTaget() <= l*qspeed ){
+        x = taget.pos[0];
+        y = taget.pos[1];
 
-      if( nextStep() && wayLen ){
-        float nl = l - sqrt( sqrDistanceToTaget()/qspeed );
-        if( nl<1.0 && nl > 0.0 )
-          return calcNextPos(x,y, nl); else
+        if( nextStep() && wayLen ){
+          float nl = l - sqrt( sqrDistanceToTaget()/qspeed );
+          if( nl<1.0 && nl > 0.0 )
+            return calcNextPos(x,y, nl); else
+            return 1;
+          } else
           return 1;
-        } else
-        return 1;
+        }
       }
 
     x = x/*owner->x()*/ + l*moveVec[0];
@@ -396,9 +398,10 @@ void UnitBehavior::command(float x, float y, int sq, bool fake){
     }
 
 void UnitBehavior::command( GLObject* obj ){
+    if( obj ){
+      moveCommand( obj->x(), obj->y(), 1, 0, true);
+      }
     taget.unit = obj;
-    if( taget.unit )
-      moveCommand( taget.unit->x(), taget.unit->y(), 1, 0, true);
     }
 
 void UnitBehavior::deleteUnitEvent( const GLObject * obj ){
@@ -445,7 +448,7 @@ void UnitBehavior::setMoveDisplace(float x, float y){
         int mx = Map::coordX( taget.pos[0] ),
             my = Map::coordY( taget.pos[1] );
         way.push_back( MoveAlgo::Point(mx, my) );
-        wayLen = 0;
+        wayLen = sqrt(x*x+y*y)*moveSpeed;
         }
 
       wasMoveDisplace = 1;

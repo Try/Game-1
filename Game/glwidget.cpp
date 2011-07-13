@@ -228,14 +228,7 @@ void GLWidget::paintGL(){
 			return;
 
 		setFocus();
-
 		updateMouseCoords(mouseCoords2d[0], mouseCoords2d[1]);
-		updateMouseCoords(0,       0, scene.getSceneGraph()->gameViewRect[0]);
-		updateMouseCoords(width(), 0, scene.getSceneGraph()->gameViewRect[1]);
-		updateMouseCoords(width(), height(),
-											scene.getSceneGraph()->gameViewRect[2]);
-		updateMouseCoords(0,       height(),
-											scene.getSceneGraph()->gameViewRect[3]);
 
 		if( GLObject::ideObject ){
 			GLObject::ideObject->
@@ -580,6 +573,13 @@ void GLWidget::moveCamera(){
 			scene.lights().at(i).
 					setPosition( camera.x(), camera.y(), camera.z() );
 			}
+
+		updateMouseCoords(0,       0, scene.getSceneGraph()->gameViewRect[0]);
+		updateMouseCoords(width(), 0, scene.getSceneGraph()->gameViewRect[1]);
+		updateMouseCoords(width(), height(),
+											scene.getSceneGraph()->gameViewRect[2]);
+		updateMouseCoords(0,       height(),
+											scene.getSceneGraph()->gameViewRect[3]);
 		}
 
 void GLWidget::updateMouseCoords(int mx, int my, double *out){

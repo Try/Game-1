@@ -9,7 +9,7 @@
     shadows        = "1"
     shadowQuality  = "2"
     windowMode     = "1"
-    grass  = "0"
+    grass  = "1"
     ssao   = "0"
     />
 

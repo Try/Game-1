@@ -84,7 +84,8 @@ void GameSceneGraph::beginFrame( Mode m ){
       testRect[1][1] = max(gameViewRect[i][1], testRect[1][1]);
       }
 
-    graph.beginFrame();
+    // graph.beginFrame();
+    graph.updateCull();
     updateVisible(m);
     }
 
@@ -98,6 +99,7 @@ void GameSceneGraph::updateVisible( ){
 
 void GameSceneGraph::updateVisible( Mode m ){
     size_t nsize = 0;
+    visObj.reserve( scene.objects().size() );
 
     size_t objSize = scene.objects().size();
     for(size_t i=0; i<objSize; ++i){
@@ -124,7 +126,7 @@ void GameSceneGraph::updateVisible( Mode m ){
             compareSh );
       }
 
-    // visObj.resize( nsize/2 );
+    // visObj.resize( visObj.size()/2 );
     }
 
 bool GameSceneGraph::compare( const MyGL::IGraphicsObject *ag,
